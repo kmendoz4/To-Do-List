@@ -11,3 +11,30 @@
     background: linear-gradient(135deg, #153677, #4e085f);
     padding: 10px;
 }
+.todo{
+    width: 100%;  /* this is creating a box around the todo list title */
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px ; /* 40px top, 30px right and left, 70px bottom */
+    border-radius: 10px; /* round the corners */
+}
+.todo h2{ /* for the text in the todo box title */
+    color: #002675;
+    display: flex; /* flex to align icon and text */
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo h2 img{ /* image in the title */
+    width: 30px; /* can adjust the size of the icon in CSS */
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}

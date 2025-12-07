@@ -46,11 +46,11 @@ input{
     padding: 10px;
 }
 button{
-     border: none;
+    border: none;
     outline: none;
     padding: 16px 50px; /* 16px top and bottom, 50px left and right */
     background: #ff5945;
-    color: #fff
+    color: white;
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
@@ -72,6 +72,29 @@ ul li::before{ /* adds a circle before the "task" text */
     background-image: url(/Users/kaylamendoza/Documents/VSCode/Images/Unchecked.png);
     background-size: cover;
     background-position: center;
-    top: 12px;jj
+    top: 12px;
     left: 8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{ /* changes the circle before the text when checked */
+    background-image: url(/Users/kaylamendoza/Documents/VSCode/Images/Checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+ul li span:hover{
+    background: #ff5945;
+    color: white;
+    border-radius: 50%; /* makes it a circle */
 }

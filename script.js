@@ -14,7 +14,27 @@ function addTask(){
         li.appendChild(span); //adding the span to the li
     }
     inputBox.value = ""; //after adding task, input box will be empty again
+    saveData(); //anytime we add a task it will save the data
 }
 
 //java for click function
+listContainer.addEventListener("click", function(e){ 
+    if(e.target.tagName === "LI"){ //this checks where we clicked to see what to do
+        e.target.classList.toggle("checked");
+        saveData();
+    }
+    else if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();//if we clicked on the x (span)
+        saveData();
+    }
+}, false);
 
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML); //whatever is in the listContainer will be stored in the local storage data
+}
+
+//need to display data whenever opening the website again
+function showTask(){
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+showTask();

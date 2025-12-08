@@ -94,7 +94,7 @@ ul li span{
     text-align: center;
 }
 ul li span:hover{
-    background: #ff5945;
+    background: #d1cfcf;
     color: white;
     border-radius: 50%; /* makes it a circle */
 }
